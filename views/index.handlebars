@@ -1,0 +1,16 @@
+<header><nav><ul><li><a href="/"> Home </a></li><li><a href="/listprod"> Find Products </a></li><li><a href="/showcart"> Your Cart </a></li><li> <a href="/listorder"> Past orders </a></li>{{#if username}}<li>Signed in as: {{username}}</li>{{/if}}</ul></nav></header>
+<style type=text/css> header {background-color: white; position: static; left: 0; right: 0;  top: 5px;  height: 30px;  display: flex;  align-items: center;  }  header * {  display: inline;  }  header li {  margin: 20px;  }  header li a {  color: blue;  text-decoration: none;  }  </style>
+<h1 align="center"><font face="normal" color="#cf0921">Welcome to Tasty Texts</font></h1><hr>
+
+<h1 align="center"><img src="img/textbook.png" alt="tasty textbook" width=215 height=175></img> </h1>
+<h1 align="center"><i>Your one stop shop for edible textbooks!</i></h1>
+<h2 align="center"><a href="/login">Login</a></h2>
+<h2 align="center"><a href="/listprod">Begin Shopping</a></h2>
+<h2 align="center"><a href="/listorder">List All Orders</a></h2>
+<h2 align="center"><a href="/customer">Customer Info</a></h2>
+<h2 align="center"><a href="/admin">Administrators</a></h2>
+<h2 align="center"><a href="/logout">Log out</a></h2>
+
+{{#if username}}
+    <h3 align="center">Signed in as: {{username}}</h3>
+{{/if}}

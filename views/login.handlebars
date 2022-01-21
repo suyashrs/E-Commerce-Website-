@@ -1,0 +1,37 @@
+<header><nav><ul><li><a href="/"> Home </a></li><li><a href="/listprod"> Find Products </a></li><li><a href="/showcart"> Your Cart </a></li><li> <a href="/listorder"> Past orders </a></li>{{#if username}}<li>Signed in as: {{username}}</li>{{/if}}</ul></nav></header>
+<style type=text/css> header {background-color: white; position: static; left: 0; right: 0;  top: 5px;  height: 30px;  display: flex;  align-items: center;  }  header * {  display: inline;  }  header li {  margin: 20px;  }  header li a {  color: blue;  text-decoration: none;  }  </style>
+<h1 align="center"><font face="normal" color="#cf0921">Tasty Texts</font></h1><hr>
+
+<div style="margin:0 auto;text-align:center;display:inline">
+
+    <h3>Please Login to System</h3>
+
+    {{#if loginMessage}}
+        <p>{{loginMessage}}</p>
+    {{/if}}
+
+    <br>
+    <form name="MyForm" method=post action="/validateLogin">
+        <table style="display:inline">
+            <tr>
+                <td>
+                    <div align="right">
+                        <font face="Arial, Helvetica, sans-serif" size="2">Username:</font>
+                    </div>
+                </td>
+                <td><input type="text" name="username" size=10 maxlength=10></td>
+            </tr>
+            <tr>
+                <td>
+                    <div align="right">
+                        <font face="Arial, Helvetica, sans-serif" size="2">Password:</font>
+                    </div>
+                </td>
+                <td><input type="password" name="password" size=10 maxlength="10"></td>
+            </tr>
+        </table>
+        <br />
+        <input class="submit" type="submit" name="Submit2" value="Log In">
+    </form>
+
+</div>
